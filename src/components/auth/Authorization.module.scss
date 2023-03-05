@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.form_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_side, .right_side {
+  width: 427px;
+  height: 640px;
+}
+
+.left_side {
+  background: url("../../assets/bg-photo.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 331px;
+    height: 161px;
+  }
+}
+
+.right_side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokahz {
+  width: 240px;
+  height: 412px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+
+  input {
+    width: 100%;
+  }
+}
+
+.input_box {
+  position: relative;
+  margin: 0 0 20px 0;
+
+  label {
+    position: absolute;
+    /* смещение относительно родительского элемента 10px вверх от верхнего края и   10px влево */
+    top: -20px;
+    left: 0px;
+    background: #fff;
+    padding: 0 5px;
+  }
+
+}
+
+//
+//.bg_photo {
+//  height: 480px;
+//  width: 320px;
+//  background: url(../../assets/bg-photo.png);
+//  // filter: brightness(65%);
+//  background-size: contain;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  img {
+//    width: 80%;
+//  }
+//}
+//
+//.main_container {
+//  background: #fffaf0;
+//  height: 480px;
+//  width: 320px;
+//  border: 1px solid red;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  form {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//    padding: 174px 140px;
+//    hr {
+//      border: none; /* Убираем границу */
+//      background-color: red; /* Цвет линии */
+//      color: #8b5d27; /* Цвет линии для IE6-7 */
+//      height: 2px; /* Толщина линии */
+//      width: 166px;
+//    }
+//  }
+//}
+//
+//.signIn {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}

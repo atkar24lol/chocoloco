@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.form_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_side, .right_side {
+  width: 427px;
+  height: 640px;
+}
+
+.left_side {
+  background: url("../../assets/bg-photo.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 331px;
+    height: 161px;
+  }
+}
+
+.right_side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokahz {
+  width: 240px;
+  height: 412px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+
+  input {
+    width: 100%;
+  }
+}
+
+.input_box {
+  position: relative;
+  margin: 0 0 20px 0;
+
+  label {
+    position: absolute;
+    /* смещение относительно родительского элемента 10px вверх от верхнего края и   10px влево */
+    top: -20px;
+    left: 0px;
+    background: #fff;
+    padding: 0 5px;
+  }
+
+}
