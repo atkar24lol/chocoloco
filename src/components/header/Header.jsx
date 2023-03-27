@@ -4,8 +4,34 @@ import Logo from '../../assets/logo.svg';
 import Loop from '../../assets/loop.svg'
 import Filter from '../../assets/filter.svg'
 import Call from '../../assets/call.svg'
+import { Link } from "react-router-dom";
+import Catalog from '../../pages/Catalog';
 
 function Header(props) {
+
+    const links = [
+        {
+            link: '/',
+            name: 'Bovetti'
+        },
+        {
+            link: '/catalog',
+            name: 'Leonidas'
+        },
+        {
+            link: '#',
+            name: 'Lindt'
+        },
+        {
+            link: '#',
+            name: 'Michel Cluizel'
+        },
+        {
+            link: '#',
+            name: 'Toblerone'
+        }
+    ]
+
     return (
         <header className={module.header}>
             <div className={module.top}>
@@ -28,11 +54,16 @@ function Header(props) {
             </div>
             <div className={module.bottom}>
                 <ul>
-                    <li className={module.active}><a href="#">Bovetti</a></li>
-                    <li><a href="#">Leonidas</a></li>
+                    {/*<li className={module.active}><a href="/">Bovetti</a></li>
+                    <li><a href="catalog">Leonidas</a></li>
                     <li><a href="#">Lindt</a></li>
                     <li><a href="#">Michel Cluizel</a></li>
-                    <li><a href="#">Toblerone</a></li>
+    <li><a href="#">Toblerone</a></li>*/}
+                    {links.map((url, index) => {
+                        return (
+                            <li><a href={url.link}>{url.name}</a></li>
+                        )
+                    })}
                 </ul>
             </div>
         </header>
