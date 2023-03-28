@@ -43,21 +43,33 @@ body {
   flex-direction: column;
   padding: 20px;
 }
+
+.pokahz {
+  width: 360px;
+  height: 623px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+
 .title-modal {
   text-align: center;
-  font-weight: 600;
-  font-size: 20px;
   margin-bottom: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
 }
 .container {
-  max-width: 1300px;
-  margin: 10px auto;
   min-height: 400px;
 }
 .center-flex {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background: #fffaf0;
 }
 .button-green {
   margin: 5px 0;
@@ -91,10 +103,28 @@ body {
   width: 100%;
 }
 
+.header-catalog {
+  width: 75%;
+  padding-bottom: 5%;
+}
+
+.title-product {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 86px;
+  line-height: 85px;
+  border-left: 0.5rem solid #52341e;
+  padding-left: 1rem;
+}
+
+.card-link-wrapper {
+  min-height: 502px;
+}
+
 .card {
   width: 360px;
   max-width: 100%;
-  border: 1px solid black;
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -103,14 +133,33 @@ body {
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
 }
 img {
   max-width: 100%;
 }
-.card img {
+.card img:not(.cart-image, .img-favorite) {
   height: 200px;
 }
+
+.card-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23.2324px;
+  line-height: 27px;
+}
+
+.card-description {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9.12703px;
+  line-height: 14px;
+}
+
 .card-image,
 .card-title,
 .card-price {
@@ -119,17 +168,43 @@ img {
 .card-title,
 .card-price {
   margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: 600;
   margin-top: 10px;
 }
 .card-description {
   margin-bottom: 30px;
 }
 .card-price {
-  margin-top: auto;
-  color: red;
+  color: #52341e;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 16.5946px;
+  line-height: 25px;
+  text-align: left;
+  font-weight: 600;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
 }
+
+.card-favorite-button {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.img-favorite {
+  position: absolute;
+  height: 20px;
+  right: 0;
+}
+
+.cart-image {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .product-info {
   display: flex;
   padding: 50px 0;

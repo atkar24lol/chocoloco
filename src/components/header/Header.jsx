@@ -4,8 +4,9 @@ import Logo from '../../assets/logo.svg';
 import Loop from '../../assets/loop.svg'
 import Filter from '../../assets/filter.svg'
 import Call from '../../assets/call.svg'
-import { Link } from "react-router-dom";
-import Catalog from '../../pages/Catalog';
+import bovettiimg from '../../assets/bovetti4.png'
+import { useState } from 'react';
+
 
 function Header(props) {
 
@@ -32,6 +33,16 @@ function Header(props) {
         }
     ]
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
     return (
         <header className={module.header}>
             <div className={module.top}>
@@ -45,20 +56,29 @@ function Header(props) {
                     <button className={module.contact}><img src={Call} alt="" /><h1>Контакты: <br /> +996 123 456</h1></button>
                     <button className={module.heart}></button>
                     <button className={module.profile}></button>
-                    <button className={module.bag}>
+                    <button onClick={openModal} className={module.bag}>
                         <h1>Корзина</h1>
                         <div></div>
                         <h2>2</h2>
                     </button>
+                    {isOpen && (
+                        <div className={module.modal}>
+                            <div className={module.modal_content}>
+                                <span className="close" onClick={closeModal}>
+                                    &times;
+                                </span>
+                                <h1>Корзина</h1>
+                                <section>
+                                    <img/>
+
+                                </section>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
             <div className={module.bottom}>
                 <ul>
-                    {/*<li className={module.active}><a href="/">Bovetti</a></li>
-                    <li><a href="catalog">Leonidas</a></li>
-                    <li><a href="#">Lindt</a></li>
-                    <li><a href="#">Michel Cluizel</a></li>
-    <li><a href="#">Toblerone</a></li>*/}
                     {links.map((url, index) => {
                         return (
                             <li><a href={url.link}>{url.name}</a></li>

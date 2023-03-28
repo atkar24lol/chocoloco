@@ -1,8 +1,8 @@
 import google_image from '../../assets/google.png'
 import facebook_image from '../../assets/facebook.png'
-import {auth, provider, providerFacebook} from '../../app/firebase'
-import {signInWithPopup, signInWithEmailAndPassword} from 'firebase/auth'
-import {useState} from 'react'
+import { auth, provider, providerFacebook } from '../../app/firebase'
+import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth'
+import { useState } from 'react'
 import module from "./Authorization.module.scss"
 import Logo from "../../assets/logo-modal.svg"
 import Facebook from '../../assets/facebook.svg'
@@ -17,7 +17,7 @@ const Authorization = (props) => {
     async function signInWithGoogle() {
         try {
             await signInWithPopup(auth, provider)
-            props.closeModal({type: "modal", active: "false"})
+            props.closeModal({ type: "modal", active: "false" })
         } catch (error) {
             console.log(error)
         }
@@ -26,7 +26,7 @@ const Authorization = (props) => {
     async function signInWithFacebook() {
         try {
             await signInWithPopup(auth, providerFacebook)
-            props.closeModal({type: "modal", active: "false"})
+            props.closeModal({ type: "modal", active: "false" })
         } catch (error) {
             console.log(error)
         }
@@ -50,8 +50,8 @@ const Authorization = (props) => {
         setPassword(e.target.value)
     }
 
-    return (<div className="form-modal" className={module.form_modal}>
-        <div className={module.left_side}><img src={Logo} alt=""/></div>
+    return (<div className={module.form_modal}>
+        <div className={module.left_side}><img src={Logo} alt="" /></div>
         <div className={module.right_side}>
             <div className={module.pokahz}>
                 <div className="title-modal">Вход</div>
@@ -62,16 +62,16 @@ const Authorization = (props) => {
                 </div>
                 <form onSubmit={signIn}>
                     <div className={module.input_box}>
-                        <label htmlFor="login">E-mail</label>
-                        <input type="text" name="login" placeholder="Введите e-mail" onChange={inputLogin}/>
+                        <label className='label-input' htmlFor="login">E-mail</label>
+                        <input type="text" name="login" placeholder="Введите e-mail" onChange={inputLogin} />
                     </div>
                     <div className={module.input_box}>
                         <label htmlFor="password">Пароль</label>
-                        <input type="password" name="password" placeholder="Введите пароль" onChange={inputPassword}/>
+                        <input type="password" name="password" placeholder="Введите пароль" onChange={inputPassword} />
                     </div>
                     <div>
                         <label htmlFor="login"></label>
-                        <input type="submit" value="Войти"/>
+                        <input type="submit" value="Войти" />
                     </div>
                     <div>
                         <img style={{
@@ -83,9 +83,9 @@ const Authorization = (props) => {
                             marginRight: 'auto',
                             cursor: 'pointer'
                         }}
-                             src={google_image}
-                             alt=""
-                             onClick={signInWithGoogle}/>
+                            src={google_image}
+                            alt=""
+                            onClick={signInWithGoogle} />
                     </div>
                 </form>
             </div>

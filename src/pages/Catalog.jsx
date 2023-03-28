@@ -21,6 +21,9 @@ const Catalog = (props) => {
     return (
         <div>
             <div className="container center-flex">
+                <header className="header-catalog">
+                    <h2 className="title-product">Leonidas</h2>
+                </header>
                 <div className="catalog-list">
                     {showAllProducts}
                 </div>

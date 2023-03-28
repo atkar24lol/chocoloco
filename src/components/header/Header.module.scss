@@ -24,7 +24,6 @@
 .logo {
   width: 102px;
   height: 50px;
-
 }
 
 .search {
@@ -197,5 +196,32 @@
 .logo {
   :hover {
     cursor: pointer;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  z-index: 9999;
+  background-color: rgb(255, 0, 0);
+}
+
+.modal_content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+
+  span {
+    position: absolute;
+    right: 20px;
+
+    font-size: 30px;
   }
 }
